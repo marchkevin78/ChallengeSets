@@ -49,12 +49,33 @@ namespace ChallengeSets
 
         public int Sum(int[] numbers)
         {
-            throw new NotImplementedException();
+            int num = 0;
+            if (numbers == null || numbers.Length == 0)
+            {
+                return 0;
+            }
+            foreach (int item in numbers)
+            {
+                num += item;
+            }
+            return num;
         }
 
         public int SumEvens(int[] numbers)
         {
-            throw new NotImplementedException();
+            var evens = 0;
+            if (numbers == null || numbers.Length == 0)
+            {
+                return 0;
+            }
+                foreach (var num in numbers)
+                {
+                    if (num % 2 == 0)
+                    {
+                        evens += num;
+                    }
+                }
+                return evens;
         }
 
         public bool IsSumOdd(List<int> numbers)
