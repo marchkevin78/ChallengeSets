@@ -44,7 +44,6 @@ namespace ChallengeSets
 
         public int GetLengthOfShortestString(string str1, string str2)
         {
-            
             int length1 = str1.Length;
             int length2 = str2.Length;
             if (length1 < length2)
@@ -88,22 +87,15 @@ namespace ChallengeSets
         public bool IsSumOdd(List<int> numbers)
         {
             var sum = 0;
-            if (numbers == null || numbers.Count == 0)
+            foreach (var num in numbers)
             {
-                return false;
+                sum += num;
             }
-                foreach (var num in numbers)
-                {   
-                    sum += num;
-                {
-                    if (sum % 2 != 0)
-                    {
-                        return true;
-                    }
-                    return false;
-                }
+            if (sum % 2 != 0)
+            {
+                return true;
             }
-            return true;
+            return false;
         }
 
         public long CountOfPositiveOddsBelowNumber(long number)
