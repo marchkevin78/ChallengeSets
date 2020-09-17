@@ -87,6 +87,10 @@ namespace ChallengeSets
         public bool IsSumOdd(List<int> numbers)
         {
             var sum = 0;
+            if (numbers == null || numbers.Count == 0)
+            {
+                return false;
+            }
             foreach (var num in numbers)
             {
                 sum += num;
