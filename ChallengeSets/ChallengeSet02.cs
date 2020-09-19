@@ -49,13 +49,11 @@ namespace ChallengeSets
 
         public int GetLengthOfShortestString(string str1, string str2)
         {
-            int length1 = str1.Length;
-            int length2 = str2.Length;
-            if (length1 < length2)
+            if (str1.Length < str2.Length)
             {
-                return length1;
+                return str1.Length;
             }
-            else return length2;
+            return str2.Length;
         }
 
         public int Sum(int[] numbers)
