@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace ChallengeSets
 {
@@ -33,12 +34,20 @@ namespace ChallengeSets
 
         public decimal Divide(decimal dividend, decimal divisor)
         {
-            throw new NotImplementedException();
+            if (divisor == 0)
+            {
+                return 0;
+            }
+            return dividend / divisor;
         }
 
         public int LastMinusFirst(int[] nums)
         {
-            throw new NotImplementedException();
+            if (nums == null)
+            {
+                return 0;
+            }
+            else return nums.Max() - nums.Min();
         }
         public int[] GetOddsBelow100()
         {
