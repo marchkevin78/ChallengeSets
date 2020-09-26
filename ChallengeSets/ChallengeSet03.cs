@@ -47,7 +47,7 @@ namespace ChallengeSets
             {
                 return 0;
             }
-            else return nums.Max() - nums.Min();
+            else return nums.Last() - nums.First();
         }
         public int[] GetOddsBelow100()
         {
