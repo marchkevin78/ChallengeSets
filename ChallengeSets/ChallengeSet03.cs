@@ -13,7 +13,23 @@ namespace ChallengeSets
 
         public bool IsSumOfOddsOdd(IEnumerable<int> numbers)
         {
-            throw new NotImplementedException();
+            var odd = 0;
+            if (numbers == null)
+            {
+                return false;
+            }
+            foreach (var num in numbers)
+            {
+                if (num % 2 != 0)
+                {
+                    odd += num;
+                }
+            }
+            if (odd % 2 != 0)
+            {
+                return true;
+            }
+            return false;
         }
 
         public bool PasswordContainsUpperLowerAndNumber(string password)
