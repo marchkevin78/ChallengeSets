@@ -8,7 +8,23 @@ namespace ChallengeSets
     {
         public bool ArrayContainsAFalse(bool[] vals)
         {
-            throw new NotImplementedException();
+            bool cont = false;
+            if (vals == null)
+            {
+                return false;
+            }
+            foreach (var item in vals)
+            {
+                if (item == false)
+                {
+                    cont = true;
+                }
+            }
+            if (cont == true)
+            {
+                return true;
+            }
+            return false;
         }
 
         public bool IsSumOfOddsOdd(IEnumerable<int> numbers)
@@ -43,17 +59,14 @@ namespace ChallengeSets
                 {
                     upper = true;
                 }
-
                 if (char.IsLower(item))
                 {
                     lower = true;
                 }
-
                 if (char.IsNumber(item))
                 {
                     num = true;
                 }
-                
             }
             if (upper == true && lower == true && num == true)
             {
