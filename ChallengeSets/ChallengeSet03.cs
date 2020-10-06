@@ -107,6 +107,7 @@ namespace ChallengeSets
         {
             int[] odds = new int[50];
             var x = 0;
+            //var x = 1;
             //for (int i = 0; i < 50; i++)
             //{
             //    odds[i] = x;

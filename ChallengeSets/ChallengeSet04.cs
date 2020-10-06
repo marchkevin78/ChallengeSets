@@ -10,8 +10,20 @@ namespace ChallengeSets
 
         public int GetLengthOfShortestString(string str1, string str2, string str3, string str4)
         {
-            throw new NotImplementedException();
-        }
+            if (str1.Length <= str2.Length && str1.Length <= str3.Length && str1.Length <= str4.Length)
+            {
+                return str1.Length;
+            }
+            else if (str2.Length <= str1.Length && str2.Length <= str3.Length && str2.Length <= str4.Length)
+            {
+                return str2.Length;
+            }
+            else if (str3.Length <= str1.Length && str3.Length <= str2.Length && str3.Length <= str4.Length)
+            {
+                return str3.Length;
+            }
+            else return str4.Length;
+        } 
 
         public int GetSmallestNumber(int number1, int number2, int number3, int number4)
         {
