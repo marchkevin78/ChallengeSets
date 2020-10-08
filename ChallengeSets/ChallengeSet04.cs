@@ -18,7 +18,7 @@ namespace ChallengeSets
             {
                 return str2.Length;
             }
-            else if (str3.Length <= str1.Length && str3.Length <= str2.Length && str3.Length <= str4.Length)
+            else if (str3.Length <= str1.Length && str3.Length <= str2.Length && str3.Length < str4.Length)
             {
                 return str3.Length;
             }
@@ -27,7 +27,19 @@ namespace ChallengeSets
 
         public int GetSmallestNumber(int number1, int number2, int number3, int number4)
         {
-            throw new NotImplementedException();
+            if (number1 <= number2 && number1 <= number3 && number1 <= number4)
+            {
+                return number1;
+            }
+            else if (number2 <= number1 && number2 <= number3 && number2 <= number4)
+            {
+                return number2;
+            }
+            else if (number3 <= number1 && number3 <= number2 && number3 <= number4)
+            {
+                return number3;
+            }
+            else return number4;
         }
 
         public void ChangeBusinessNameTo_TrueCoders(Business biz)
