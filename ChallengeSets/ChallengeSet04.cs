@@ -5,13 +5,22 @@ namespace ChallengeSets
     {
         public int AddEvenSubtractOdd(int[] numbers)
         {
-            //if (numbers == null)
-            //{
-            //    return 0;
-            //}
-            //var even = 0;
-            //var odd = 0;
-            throw new NotImplementedException();
+            if (numbers == null || numbers.Length == 0)
+            {
+                return 0;
+            }
+            var even = 0;
+            var odd = 0;
+            foreach (var item in numbers)
+                if (item % 2 == 0)
+                {
+                    even += item;
+                }
+                else if (item % 2 != 0)
+                {
+                    odd += item;
+                }
+            return even - odd;
         }
 
         public int GetLengthOfShortestString(string str1, string str2, string str3, string str4)
