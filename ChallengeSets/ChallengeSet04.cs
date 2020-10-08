@@ -5,6 +5,12 @@ namespace ChallengeSets
     {
         public int AddEvenSubtractOdd(int[] numbers)
         {
+            //if (numbers == null)
+            //{
+            //    return 0;
+            //}
+            //var even = 0;
+            //var odd = 0;
             throw new NotImplementedException();
         }
 
@@ -54,7 +60,16 @@ namespace ChallengeSets
 
         public bool IsStringANumber(string input)
         {
-            throw new NotImplementedException();
+            if (input == null)
+            {
+                return false;
+            }
+            var number = int.TryParse(input, out int x);
+            var number1 = double.TryParse(input, out double y);
+            if (number == true || number1 == true)
+                return true;
+            else
+                return false;
         }
 
         public bool MajorityOfElementsInArrayAreNull(object[] objs)
