@@ -88,12 +88,32 @@ namespace ChallengeSets
 
         public double AverageEvens(int[] numbers)
         {
+            //var even = 0.0;
+            //foreach (var item in numbers)
+            //{
+            //    if (item % 2 == 0)
+            //    {
+            //        even += item;
+            //    }
+            //}
+            //return
+
             throw new NotImplementedException();
         }
 
         public int Factorial(int number)
         {
-            throw new NotImplementedException();
+            if (number == 0)
+            {
+                return 1;
+            }
+            int num = 1;
+            while (number != 1)
+            {
+                num = num * number;
+                number = number - 1;
+            }
+            return num;
         }
     }
 }
