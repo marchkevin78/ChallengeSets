@@ -38,7 +38,7 @@ namespace ChallengeSets
                 return str3.Length;
             }
             else return str4.Length;
-        } 
+        }
 
         public int GetSmallestNumber(int number1, int number2, int number3, int number4)
         {
@@ -60,7 +60,7 @@ namespace ChallengeSets
         public void ChangeBusinessNameTo_TrueCoders(Business biz)
         {
             Business myBusiness = new Business();
-            
+
             biz.Name = "TrueCoders";
         }
 
@@ -70,7 +70,7 @@ namespace ChallengeSets
             {
                 return false;
             }
-            else if  (sideLength1 + sideLength2 > sideLength3 && sideLength1 + sideLength3 > sideLength2 && sideLength2 + sideLength3 > sideLength1)
+            else if (sideLength1 + sideLength2 > sideLength3 && sideLength1 + sideLength3 > sideLength2 && sideLength2 + sideLength3 > sideLength1)
             {
                 return true;
             }
@@ -104,7 +104,7 @@ namespace ChallengeSets
                     count++;
                 }
             }
-            if (count > objs.Length/2)
+            if (count > objs.Length / 2)
             {
                 return true;
             }
@@ -124,7 +124,7 @@ namespace ChallengeSets
             double count = 0;
             foreach (var number in numbers)
             {
-                if (number%2 == 0)
+                if (number % 2 == 0)
                 {
                     container += number;
                     count++;
@@ -139,6 +139,10 @@ namespace ChallengeSets
 
         public int Factorial(int number)
         {
+            if (number < 0)
+            {
+                throw new ArgumentOutOfRangeException();
+            }
             if (number == 0)
             {
                 return 1;
@@ -151,5 +155,6 @@ namespace ChallengeSets
             }
             return num;
         }
+        
     }
 }
