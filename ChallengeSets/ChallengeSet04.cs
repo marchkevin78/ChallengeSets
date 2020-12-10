@@ -122,11 +122,11 @@ namespace ChallengeSets
             }
             double container = 0;
             double count = 0;
-            foreach (var number in numbers)
+            foreach (var item in numbers)
             {
-                if (number % 2 == 0)
+                if (item % 2 == 0)
                 {
-                    container += number;
+                    container += item;
                     count++;
                 }
             }
