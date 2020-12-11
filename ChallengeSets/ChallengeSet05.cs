@@ -55,26 +55,24 @@ namespace ChallengeSets
                     asc = true;
                 }
             }
-            return asc;
-
-            
+            return asc;    
         }
 
         public int SumElementsThatFollowAnEven(int[] numbers)
         {
-            throw new NotImplementedException();
-
-            //if (numbers == null || numbers.Length == 0)
-            //{
-            //    return 0;
-            //}
-            //var even = 0;
-            //foreach (var item in numbers)
-            //    if (item % 2 == 0)
-            //    {
-            //        even += item;
-            //    }
-
+            if (numbers == null || numbers.Length == 0)
+            {
+                return 0;
+            }
+            var even = 0;
+            for (int i = 0; i < numbers.Length-1; i++)
+            {
+                if (numbers[i] % 2 == 0)
+                {
+                    even += numbers[i+1];
+                }
+            }
+            return even;
         }
 
         public string TurnWordsIntoSentence(string[] words)
@@ -91,6 +89,13 @@ namespace ChallengeSets
         public double[] GetEveryFourthElement(List<double> elements)
         {
             throw new NotImplementedException();
+
+            //var fourth = 0.0;
+            //for (int i = 0; i < elements.Count; i+=4)
+            //{
+            //    fourth += i;
+            //}
+
         }
 
         public bool TwoDifferentElementsInArrayCanSumToTargetNumber(int[] nums, int targetNumber)
