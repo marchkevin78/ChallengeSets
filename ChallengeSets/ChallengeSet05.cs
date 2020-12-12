@@ -77,40 +77,64 @@ namespace ChallengeSets
 
         public string TurnWordsIntoSentence(string[] words)
         {
-            if (words == null || words.Length == 0)
-            {
-                return "";
-            }
-            var word1 = "";
-            var word2 = "";
-            return ($"{word1} {word2}");
+            throw new NotImplementedException();
+
+            //if (words == null || words.Length == 0)
+            //{
+            //    return " ";
+            //}
+            //var word1 = " ";
+            //string[] word2 = new string[] { };
+            //foreach (var item in words)
+            //{
+            //    if (item != " ")
+            //    {
+            //        word1 += item;
+            //    }
+            //    return word1;
+            //}
+            //foreach (var item in words)
+            //{
+
+            //}
+            //return {word2};
         }
 
         public double[] GetEveryFourthElement(List<double> elements)
         {
             throw new NotImplementedException();
 
-            //var fourth = 0.0;
-            //for (int i = 0; i < elements.Count; i+=4)
+            //double[] empty = new double[] { };
+            //if (elements == null || elements.Count <= 3)
             //{
-            //    fourth += i;
+            //    return empty;
             //}
-
+            //var first = 0;
+            //var fourth = 0.0;
+            //for (int i = 0; i < elements.Count; i++)
+            //{
+            //    if (i % 4 == 0)
+            //    {
+            //        empty[first] = elements[i];
+            //    }
+            //}
+            //return empty;
         }
 
         public bool TwoDifferentElementsInArrayCanSumToTargetNumber(int[] nums, int targetNumber)
         {
-            if (nums == null || nums.Length == 0)
+            if (nums == null || nums.Length <= 1)
             {
                 return false;
             }
-            var el1 = 0;
-            var el2 = 0;
-            foreach (var item in nums)
+            for (int i = 0; i < nums.Length; i++)
             {
-                if (el1 + el2 == targetNumber)
+                for (int k = 0; k < nums.Length; k++)
                 {
-                    return true;
+                    if (nums[i] + nums[k] == targetNumber && i != k)
+                    {
+                        return true;
+                    }
                 }
             }
             return false;
