@@ -77,48 +77,38 @@ namespace ChallengeSets
 
         public string TurnWordsIntoSentence(string[] words)
         {
-            throw new NotImplementedException();
-
-            //if (words == null || words.Length == 0)
-            //{
-            //    return " ";
-            //}
-            //var word1 = " ";
-            //string[] word2 = new string[] { };
-            //foreach (var item in words)
-            //{
-            //    if (item != " ")
-            //    {
-            //        word1 += item;
-            //    }
-            //    return word1;
-            //}
-            //foreach (var item in words)
-            //{
-
-            //}
-            //return {word2};
+            if (words == null || words.Length == 0)
+            {
+                return "";
+            }
+            var sentence = "";
+            foreach (var item in words)
+            {
+                if (string.IsNullOrWhiteSpace(item))
+                {
+                    continue;
+                }
+                sentence += item.Trim() + " ";
+            }
+            if (sentence == "")
+            {
+                return "";
+            }
+            return sentence.TrimEnd() + ".";
         }
 
         public double[] GetEveryFourthElement(List<double> elements)
         {
-            throw new NotImplementedException();
-
-            //double[] empty = new double[] { };
-            //if (elements == null || elements.Count <= 3)
-            //{
-            //    return empty;
-            //}
-            //var first = 0;
-            //var fourth = 0.0;
-            //for (int i = 0; i < elements.Count; i++)
-            //{
-            //    if (i % 4 == 0)
-            //    {
-            //        empty[first] = elements[i];
-            //    }
-            //}
-            //return empty;
+            var list = new List<double>();
+            if (elements == null)
+            {
+                return new double[] { };
+            }
+            for (int i = 3; i < elements.Count; i += 4)
+            {
+                list.Add(elements[i]);
+            }
+            return list.ToArray();
         }
 
         public bool TwoDifferentElementsInArrayCanSumToTargetNumber(int[] nums, int targetNumber)
